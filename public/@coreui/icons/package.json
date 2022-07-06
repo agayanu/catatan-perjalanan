@@ -1,0 +1,108 @@
+{
+  "_from": "@coreui/icons@next",
+  "_id": "@coreui/icons@3.0.0-alpha.0",
+  "_inBundle": false,
+  "_integrity": "sha512-gh6eDOc5Hoku4So59y1/Q23HKlsb0VQLH8ttjZ4CoCgax/pyYPvMXLM2f8w1d2hTdyZf9dTGuNqO3hCLJAbacw==",
+  "_location": "/@coreui/icons",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "@coreui/icons@next",
+    "name": "@coreui/icons",
+    "escapedName": "@coreui%2ficons",
+    "scope": "@coreui",
+    "rawSpec": "next",
+    "saveSpec": null,
+    "fetchSpec": "next"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/@coreui/icons/-/icons-3.0.0-alpha.0.tgz",
+  "_shasum": "3216c338c6e75cbd05e70f0a862140adcd0e9f45",
+  "_spec": "@coreui/icons@next",
+  "_where": "C:\\xampp\\htdocs\\catatan-perjalanan",
+  "author": {
+    "name": "creativeLabs Łukasz Holeczek",
+    "url": "https://coreui.io"
+  },
+  "bugs": {
+    "url": "https://github.com/coreui/coreui-icons/issues"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "Jazzy Innovations sp. z o.o.",
+      "url": "https://jazzy.pro"
+    },
+    {
+      "name": "CoreUI Team",
+      "url": "https://github.com/orgs/coreui/people/"
+    }
+  ],
+  "deprecated": false,
+  "description": "CoreUI Icons Free",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-node-resolve": "^13.1.3",
+    "autoprefixer": "^10.4.2",
+    "clean-css-cli": "^5.5.2",
+    "concat": "^1.0.3",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.6",
+    "postcss-cli": "^9.1.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.67.3",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "sass": "^1.49.8",
+    "stylelint": "^14.5.1",
+    "stylelint-config-recommended-scss": "^5.0.2",
+    "stylelint-config-standard": "^25.0.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-scss": "^4.1.0"
+  },
+  "files": [
+    "css/",
+    "dist",
+    "fonts/",
+    "js/",
+    "scss/",
+    "sprites/",
+    "svg/"
+  ],
+  "homepage": "https://github.com/coreui/coreui-icons#readme",
+  "keywords": [
+    "Icons",
+    "Font",
+    "Face",
+    "Svg",
+    "Vector"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "name": "@coreui/icons",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coreui/coreui-icons.git"
+  },
+  "scripts": {
+    "build": "npm-run-all --sequential clean css rollup",
+    "clean": "rimraf css",
+    "css": "npm-run-all --parallel css-compile* --sequential css-prefix css-concat css-minify",
+    "css-compile": "sass --style expanded --source-map --embed-sources --no-error-css scss/:css/",
+    "css-concat": "concat -o css/all.css css/free.css css/brand.css css/flag.css",
+    "css-minify": "cleancss -O1 --format breakWith=lf --with-rebase --source-map --source-map-inline-sources --output css/ --batch --batch-suffix \".min\" \"css/*.css\" \"!css/*.min.css\"",
+    "css-prefix": "postcss --config build/postcss.config.js --replace \"css/*.css\" \"!css/*.min.css\"",
+    "rollup": "rollup --config build/rollup.config.js"
+  },
+  "sideEffects": [
+    "**/*.css",
+    "**/*.scss"
+  ],
+  "style": "css/all.css",
+  "types": "dist/index.d.ts",
+  "version": "3.0.0-alpha.0"
+}
